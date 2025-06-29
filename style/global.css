@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  /* background */
+  --bg-primary: #020202;
+  --bg-secondary: #111012;
+  --bg-tertiary: #24222E;
+  --bg-brand: #C58DE7;
+  --bg-gray: #3D3D3D;
+}
+
+html{
+  background-image: url(../assets/icon/Linha.svg);
+  background-color: var(--bg-primary);
+  background-position: center;
+  background-size: 200%;
+
+}
+
+@media (width >= 80rem){
+  html{
+  background-size: cover;
+  }
+}
