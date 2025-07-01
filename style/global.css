@@ -18,11 +18,50 @@ html{
   background-color: var(--bg-primary);
   background-position: center;
   background-size: 200%;
-
+  /* color: ; */
 }
+
+body{
+  display: grid;
+}
+
+/* header{
+border: solid white;
+padding: 2rem;
+}
+main{border: solid white;
+  background-color: #C58DE7;
+padding: 2rem;
+}
+footer{ border: solid white;
+padding: 2rem;
+} */
+
 
 @media (width >= 80rem){
   html{
-  background-size: cover;
+    background-size: cover;
   }
+  /* body{
+
+
+    grid-template-areas:
+    "header main"
+    "footer main";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    & header{
+      grid-area: header;
+    }
+    & main{
+      grid-area: main;
+    }
+    & footer{
+      grid-area: footer;
+    }
+  } */
+
+
+  
 }
