@@ -11,6 +11,9 @@
   --bg-tertiary: #24222E;
   --bg-brand: #C58DE7;
   --bg-gray: #3D3D3D;
+
+  /* padding */
+  --px-lg: 2.1875rem;
 }
 
 html{
@@ -25,26 +28,19 @@ body{
   display: grid;
 }
 
-/* header{
-border: solid white;
-padding: 2rem;
-}
-main{border: solid white;
-  background-color: #C58DE7;
-padding: 2rem;
-}
-footer{ border: solid white;
-padding: 2rem;
-} */
+
 
 
 @media (width >= 80rem){
+  :root{
+    --px-lg: 8.3rem;
+  }
+
   html{
     background-size: cover;
   }
-  /* body{
 
-
+  body{
     grid-template-areas:
     "header main"
     "footer main";
@@ -60,8 +56,7 @@ padding: 2rem;
     & footer{
       grid-area: footer;
     }
-  } */
+  }
 
 
-  
 }
