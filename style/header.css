@@ -1,12 +1,21 @@
 header{
   & #logo{
-    border: solid;
     align-items: center;
 
     & p{
       font: var(--fw-xl) 1.5rem/1.3 var(--ff-sora);
       text-transform: uppercase;
       letter-spacing: -1px;
+    }
+  }
+
+  & #title{
+    & span{
+      font: var(--fw-lg) var(--fs-mid)/1.5rem var(--ff-rf);
+      text-transform: uppercase;
+      background: var(--gradient-content);
+      -webkit-background-clip: text; /* necessário para funcionar no Chrome/Safari */
+      -webkit-text-fill-color: transparent; /* oculta a cor original da fonte */
     }
   }
 }
