@@ -12,8 +12,44 @@
   --bg-brand: #C58DE7;
   --bg-gray: #3D3D3D;
 
+  /* content */
+  --content-primary: #fff;
+  --content-secondary: #C7C9CC;
+  --content-tertiary: #D9D9D9;
+  --content-brand: #C58DE7;
+  --color-inverse: #030203;
+
+  /* accent */
+  --accent-pink: #D586E0;
+  --accent-blue: #91A1FA;
+  --accent-green: #77C0AF;
+  --accent-lime: #D1DC97;
+  --accent-red: #E9A9B3;
+
+  /* gradient */
+  --gradient-brorder: linear-gradient(#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  --gradient-bg: linear-gradient(#D586E0 0%, #91A1FA 98.93%);
+  --gradient-content: linear-gradient(#C7C9CC 0%, #3D3D3D 100%);
+
   /* padding */
   --px-lg: 2.1875rem;
+
+  /* fonts */
+  --fw-xl:800;
+  --fw-lg:700;
+  --fw-mid:400;
+
+  --fs-mid:1rem;
+  --fs-smid:1.25rem;
+  --fs-sm:.875rem;
+  --fs-xs:.75rem;
+  --fs-xxl:4.5rem;
+  --fs-xl:2.5rem;
+  --fs-lg:2rem;
+
+  --ff-sora:"Sora", sans-serif;
+  --ff-mono:"Roboto Mono", monospace;
+  --ff-rf:"Roboto Flex", sans-serif ;
 }
 
 html{
@@ -21,7 +57,7 @@ html{
   background-color: var(--bg-primary);
   background-position: center;
   background-size: 200%;
-  /* color: ; */
+  color: var(--content-primary);
 }
 
 body{

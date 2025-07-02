@@ -1,0 +1,12 @@
+header{
+  & #logo{
+    border: solid;
+    align-items: center;
+
+    & p{
+      font: var(--fw-xl) 1.5rem/1.3 var(--ff-sora);
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+  }
+}
