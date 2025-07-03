@@ -9,6 +9,10 @@
   display: flex;
 }
 
+.grid{
+  display: grid;
+}
+
 @media (width >= 80em){
     .container{
     --max-width: 80em;

@@ -1,0 +1,26 @@
+#content{
+  gap: 2.25rem;
+  & .description{
+    gap: .5rem;
+    & img{
+      align-self: flex-start;
+    }
+
+    & div{
+      font: var(--fw-mid) var(--fs-sm)/1.5 var(--ff-rf);
+      & span{
+        color: var(--content-brand);
+      }
+      & p{
+        font-size: var(--fs-xs);
+        color: var(--content-secondary);
+      }
+    }
+  }
+}
+
+@media (width >= 80em){
+  #content{
+    width: 386px;
+  }
+}

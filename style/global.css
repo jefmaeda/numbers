@@ -60,12 +60,6 @@ html{
   color: var(--content-primary);
 }
 
-body{
-  display: grid;
-}
-
-
-
 
 @media (width >= 80rem){
   :root{
@@ -81,7 +75,9 @@ body{
     "header main"
     "footer main";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+
+    row-gap: 2.375rem;
 
     & header{
       grid-area: header;
@@ -89,7 +85,7 @@ body{
     & main{
       grid-area: main;
     }
-    & footer{
+    & #description-wrapper{
       grid-area: footer;
     }
   }
