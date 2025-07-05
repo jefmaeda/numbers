@@ -1,0 +1,7 @@
+#raffle{
+  & .header{
+   & h2{
+      font: var(--fw-lg) var(--fs-smid)/1.5 var(--ff-rf);
+    }
+  }
+}

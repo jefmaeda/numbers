@@ -1,0 +1,11 @@
+@import url(./sections/index.css);
+
+main{
+  margin-block: 2.625rem 5rem;
+}
+
+@media (width >= 80em){
+  main{
+    margin-block: 2.125rem;
+  }
+}

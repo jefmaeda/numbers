@@ -25,7 +25,35 @@
     </header>
   
     <main>
-  
+      <section id="raffle">
+        <div class="header">
+          <h2>Quero sortear:</h2>
+          <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+        </div>
+
+        <div id="setting-number">
+          <form>
+              <label for="amount">números</label>
+              <input type="number" name="amount" id="amount" required>
+
+              <label for="min">de</label>
+              <input type="number" name="min" id="min" required>
+
+              <label for="max">até</label>
+              <input type="number" name="max" id="max" required>
+
+              <button type="button" id="toggle-btn">
+                Não repetir número
+              </button>
+
+              <button type="submit">
+                Sortear
+                <span></span>
+              </button>
+          </form>
+        </div>
+
+      </section>
     </main>
   
     <div id="description-wrapper">
