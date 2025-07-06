@@ -20,11 +20,13 @@
         gap: .75rem;
 
         & .input-wrapper{
-          
           width: 86px;
+          margin-bottom: 1.25rem;
           & label{
             font: var(--fw-lg) var(--fs-mid)/1.5 var(--ff-rf);
             color: var(--content-secondary);
+            display: block;
+            text-align: center;
           }
           
           & input{
@@ -38,9 +40,41 @@
             background-color: var(--bg-secondary);
 
             border: solid #111012;
+            color: var(--content-primary);
+
+            text-align: center;
+            font: var(--fw-lg) var(--fs-lg)/1.5 var(--ff-sora);
           }
         }
       }
+
+      & .switch-wrapper{
+        align-items: center;
+        gap: .5rem;
+        & #switch{
+          padding: 3px;
+          width: 30px;
+          height: 20px;
+          border: solid;
+          border-radius: 1rem;
+          background: var(--gradient-bg);
+          border: none;
+
+          
+          & button{
+            width: 14px;
+            height: 14px;
+            background: var(--content-primary);
+            border: 0;
+            border-radius: 50%;
+            cursor: pointer;
+            
+            display: block;
+            margin-left: 10px;
+          }
+        }
+      }
+
     }
   }
 }
