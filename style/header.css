@@ -1,16 +1,5 @@
 header{
-  & #logo{
-    align-items: center;
-
-    & p{
-      font: var(--fw-xl) 1.5rem/1.3 var(--ff-sora);
-      text-transform: uppercase;
-      letter-spacing: -1px;
-    }
-  }
-
   & #title{
-    margin-top: 2.875rem;
     & span{
       font: var(--fw-lg) var(--fs-mid)/1.5 var(--ff-rf);
       text-transform: uppercase;
@@ -28,9 +17,9 @@ header{
 }
 
 @media (width >= 80em){
+
   header{
     & #title{
-      margin-top: 5.5625rem;
       & h1{
         margin-top: .75rem;
         font-size: var(--fs-xxl);

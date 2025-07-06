@@ -6,6 +6,7 @@ main{
 
 @media (width >= 80em){
   main{
-    margin-block: 2.125rem;
+    margin-block: 0;
+    padding-block: 2.125rem;
   }
 }
