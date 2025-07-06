@@ -1,7 +1,59 @@
 #raffle{
+  gap: 2.5rem;
   & .header{
    & h2{
       font: var(--fw-lg) var(--fs-smid)/1.5 var(--ff-rf);
+      text-transform: uppercase;
+    }
+    & p{
+      font: var(--fw-mid) var(--fs-sm)/1.5 var(--ff-rf);
+      color: var(--content-tertiary);
+    }
+  }
+
+  & #setting-number{
+    
+    & form{
+      border: solid;
+      & .input-area{
+        display: flex;
+        gap: .75rem;
+
+        & .input-wrapper{
+          
+          width: 86px;
+          & label{
+            font: var(--fw-lg) var(--fs-mid)/1.5 var(--ff-rf);
+            color: var(--content-secondary);
+          }
+          
+          & input{
+            appearance: none;
+            width: 100%;
+
+            border-radius: 8px;
+            height: 56px;
+            padding-block: 4px;
+
+            background-color: var(--bg-secondary);
+
+            border: solid #111012;
+          }
+        }
+      }
     }
   }
 }
+
+@media (width >= 80em){
+  & #raffle{
+    & .header{
+      & p{
+        font-size: var(--fs-mid);
+      }
+    }
+  }
+}
+
+
+

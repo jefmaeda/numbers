@@ -95,17 +95,12 @@ html{
     column-gap: 6.75rem;
 
     & header{
-      border: solid;
       grid-area: header;
     }
     & main{
-      border: solid;
-
       grid-area: main;
     }
     & #description-wrapper{
-      border: solid;
-
       grid-area: footer;
     }
   }

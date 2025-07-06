@@ -29,23 +29,34 @@
     </header>
   
     <main>
-      <section id="raffle">
+      <section id="raffle" class="grid">
         <div class="header">
           <h2>Quero sortear:</h2>
-          <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+          <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
         </div>
 
         <div id="setting-number">
+          
           <form>
-              <label for="amount">números</label>
-              <input type="number" name="amount" id="amount" required>
 
-              <label for="min">de</label>
-              <input type="number" name="min" id="min" required>
+            <div class="input-area">
 
-              <label for="max">até</label>
-              <input type="number" name="max" id="max" required>
-
+              <div class="input-wrapper">
+                <label for="amount">números</label>
+                <input type="text" name="amount" id="amount" required>
+              </div>
+              
+              <div class="input-wrapper">
+                <label for="min">de</label>
+                <input type="text" name="min" id="min" required>
+              </div>
+              
+              <div class="input-wrapper">
+                <label for="max">até</label>
+                <input type="text" name="max" id="max" required>
+              </div>
+            </div>
+              
               <button type="button" id="toggle-btn">
                 Não repetir número
               </button>
