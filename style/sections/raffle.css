@@ -14,7 +14,6 @@
   & #setting-number{
     
     & form{
-      border: solid;
       & .input-area{
         display: flex;
         gap: .75rem;
@@ -48,9 +47,11 @@
         }
       }
 
+      /* Switch */
       & .switch-wrapper{
         align-items: center;
         gap: .5rem;
+        margin-bottom: 2.5rem;
         & #switch{
           padding: 3px;
           width: 30px;
@@ -59,8 +60,6 @@
           border-radius: 1rem;
           background: var(--gradient-bg);
           border: none;
-
-          
           & button{
             width: 14px;
             height: 14px;
@@ -72,6 +71,34 @@
             display: block;
             margin-left: 10px;
           }
+
+        }
+        & p{
+          font: var(--fw-mid) var(--fs-xs)/1.5 var(--ff-rf);
+        }
+      }
+
+      /* button submit */
+      & button[type="submit"]{
+        justify-content: center;
+        width: 100%;
+        padding-block: 1rem;
+        cursor: pointer;
+        border-radius: .5rem;
+        border: none;
+        background-color: var(--bg-tertiary);
+
+        
+        color: var(--content-primary);
+        font: var(--fw-lg) var(--fs-mid)/1.5 var(--ff-rf);
+        text-transform: uppercase;
+
+        & span{
+          display: inline-block;
+          width: 1.5rem;
+          height: 1.5rem;
+          background-image: url(../../assets/icon/rigth-arrow.svg);
+
         }
       }
 
