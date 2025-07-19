@@ -1,6 +1,11 @@
+// form 
 const switchBtn = document.getElementById("switch")
 const btnDirection = document.querySelector("#switch button")
 
+//
+/*
+tela 1
+*/
 // Mudando de valor para mover toggle button
 switchBtn.addEventListener("click", () =>{
   
@@ -22,3 +27,27 @@ switchBtn.addEventListener("click", () =>{
     paragraph.textContent = "Não repetir o número"
   }
 })
+
+/*
+  troca de tela !!
+  
+  1 - Remover o form
+  2 - Reutlizar.
+    1.- header 
+      - mais vou deixar no centro (css), add class.
+      - contador de resultado.
+    
+    2.- button
+        - mudar o contexto. função de voltar.
+  
+*/
+
+// tela 2
+
+
+
+
+
+
+
+

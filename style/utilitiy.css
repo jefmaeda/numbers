@@ -13,6 +13,10 @@
   display: grid;
 }
 
+.hidden{
+  display: none;
+}
+
 @media (width >= 80em){
     .container{
     --max-width: 80em;

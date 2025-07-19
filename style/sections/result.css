@@ -1,0 +1,8 @@
+#result{
+  gap: 2.5rem;
+  & .header{
+    text-align: center;
+  }
+
+
+}
