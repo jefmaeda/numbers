@@ -15,6 +15,33 @@ main{
     }
 }
 
+.button{
+  justify-content: center;
+  gap: .5rem;
+  width: 100%;
+  padding-block: 1rem;
+  cursor: pointer;
+  border-radius: .5rem;
+  border: none;
+  background-color: var(--bg-tertiary);
+
+  
+  color: var(--content-primary);
+  font: var(--fw-lg) var(--fs-mid)/1.5 var(--ff-rf);
+  text-transform: uppercase;
+}
+
+.icon{
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.numbers{
+  font: var(--fw-lg) var(--fs-xl)/1.5 var(--ff-mono);
+  color: var(--content-brand);
+}
+
 @media (width >= 80em){
   main{
     margin-block: 0;

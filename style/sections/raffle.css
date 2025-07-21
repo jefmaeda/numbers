@@ -69,25 +69,8 @@
 
       /* button submit */
       & button[type="submit"]{
-        justify-content: center;
-        width: 100%;
-        padding-block: 1rem;
-        cursor: pointer;
-        border-radius: .5rem;
-        border: none;
-        background-color: var(--bg-tertiary);
-
-        
-        color: var(--content-primary);
-        font: var(--fw-lg) var(--fs-mid)/1.5 var(--ff-rf);
-        text-transform: uppercase;
-
         & span{
-          display: inline-block;
-          width: 1.5rem;
-          height: 1.5rem;
           background-image: url(../../assets/icon/rigth-arrow.svg);
-
         }
       }
 

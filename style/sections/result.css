@@ -2,7 +2,21 @@
   gap: 2.5rem;
   & .header{
     text-align: center;
+
+    & p{
+      font: var(--fw-lg) var(--fs-mid)/1.5 var(--ff-mono);
+    }
+  }
+  
+  & #out-number{
+    justify-content: space-around;
+    
   }
 
+  & button[type="button"]{
+    & span{
+      background-image: url(../../assets/icon/again.svg);
+    }
+  }
 
 }
