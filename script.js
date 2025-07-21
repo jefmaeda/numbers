@@ -1,7 +1,9 @@
 // form 
 const switchBtn = document.getElementById("switch")
-const btnDirection = document.querySelector("#switch button")
+const btnDirection = document.querySelector("#switch div")
 
+const form = document.querySelector("form")
+const submit = document.querySelector('button[type="submit"]')
 //
 /*
 tela 1
@@ -26,6 +28,11 @@ switchBtn.addEventListener("click", () =>{
     btnDirection.style.marginLeft = '10px'
     paragraph.textContent = "Não repetir o número"
   }
+})
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault()
+  console.log("enviado")
 })
 
 /*

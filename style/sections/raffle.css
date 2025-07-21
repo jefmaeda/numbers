@@ -49,7 +49,7 @@
           border-radius: 1rem;
           background: var(--gradient-bg);
           border: none;
-          & button{
+          & div{
             width: 14px;
             height: 14px;
             background: var(--content-primary);
