@@ -1,9 +1,13 @@
 // form 
+// section raffle
+const form = document.querySelector("form")
 const switchBtn = document.getElementById("switch")
 const btnDirection = document.querySelector("#switch div")
-
-const form = document.querySelector("form")
-const submit = document.querySelector('button[type="submit"]')
+const amount = document.getElementById("amount")
+const min = document.getElementById("min")
+const max = document.getElementById("max")
+//section result
+const againButton = document.querySelector('button[type="button"]')
 //
 /*
 tela 1
@@ -32,8 +36,30 @@ switchBtn.addEventListener("click", () =>{
 
 form.addEventListener("submit", (e) => {
   e.preventDefault()
-  console.log("enviado")
+  
+  hiddenChange()
+
+  formClear()
 })
+
+// mudar de section
+function hiddenChange() {
+  const raffle = document.getElementById("raffle")
+  const result = document.getElementById("result")
+
+  raffle.classList.toggle("hidden")
+  result.classList.toggle("hidden")
+
+  // celecionado o campo numeros
+  amount.focus()
+}
+
+// limpando os campos
+function formClear() {
+  amount.value = ""
+  min.value = ""
+  max.value = ""
+}
 
 /*
   troca de tela !!
@@ -50,7 +76,9 @@ form.addEventListener("submit", (e) => {
 */
 
 // tela 2
-
+againButton.addEventListener("click", () => {
+  hiddenChange()
+})
 
 
 
