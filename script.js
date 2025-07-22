@@ -3,9 +3,9 @@
 const form = document.querySelector("form")
 const switchBtn = document.getElementById("switch")
 const btnDirection = document.querySelector("#switch div")
-const amount = document.getElementById("amount")
-const min = document.getElementById("min")
-const max = document.getElementById("max")
+const amountInput = document.getElementById("amount")
+const minInput = document.getElementById("min")
+const maxInput = document.getElementById("max")
 //section result
 const againButton = document.querySelector('button[type="button"]')
 //
@@ -27,20 +27,83 @@ switchBtn.addEventListener("click", () =>{
   if (value !== '0px') {
     btnDirection.style.marginLeft = '0px'
     paragraph.textContent = "Pode repetir o número"
+    switchBtn.classList.remove("active")
 
   } else {
     btnDirection.style.marginLeft = '10px'
     paragraph.textContent = "Não repetir o número"
+    switchBtn.classList.add("active")
   }
 })
 
+// Capturando o submit do formulário
 form.addEventListener("submit", (e) => {
-  e.preventDefault()
+  e.preventDefault() // removendo o carregamento padrao
   
-  hiddenChange()
+  // Converte de string para int, 
+  // trim =  remove espaços extras do começo e do fim.
+  const amount = parseInt(amountInput.value.trim())
+  const min = parseInt(minInput.value.trim())
+  const max = parseInt(maxInput.value.trim())
+
+  // Verificação básica
+  // se são letras
+  if (isNaN(amount) || isNaN(min) || isNaN(max)){
+    return alert("Preencha todos os campos com números válidos.")
+  }
+
+  // se o min e maior q o max
+  if (min >= max){
+    return alert("O valor mínimo deve ser menor que o máximo.")
+  }
+
+  // verifica se o botão de "não repetir número" está ativado.
+  const shouldAvoidRepeats = switchBtn.classList.contains("active")
+
+  const numbers = generateRandomNumbers(amount, min, max, shouldAvoidRepeats)
+
+  if (!numbers) {
+    return alert("Não foi possível sortear com os dados fornecidos.")
+  }
+
+  alert(`Números sorteados: ${numbers.join(", ")}`)
+
+
+  hiddenChange() // mudando de tela
 
   formClear()
 })
+
+// Função que sorteia números randômicos
+function generateRandomNumbers(amount, min, max, noRepeat) {
+  const result = [] // array onde serão guardados os números sorteados.
+  const range = max - min + 1
+
+  // Verifica se é possível gerar a quantidade desejada sem repetir
+  if (noRepeat && amount > range) { 
+    // Se a pessoa quer números sem repetir e pediu mais do que o intervalo permite, não dá pra sortear 
+    return null
+  }
+
+  while (result.length < amount) {
+    /**
+     * Math.random() → gera número entre 0 e 1.
+     * Multiplica para ajustar entre min e max, depois arredonda com Math.floor().
+     */
+    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min
+
+    if(noRepeat){ // Se a repetição for true 
+      if (!result.includes(randomNumber)) { // só adiciona se ainda não estiver na lista.
+        result.push(randomNumber)
+      }
+    }
+    else{
+      result.push(randomNumber)
+    }
+  }
+
+  return result
+}
 
 // mudar de section
 function hiddenChange() {
@@ -51,31 +114,31 @@ function hiddenChange() {
   result.classList.toggle("hidden")
 
   // celecionado o campo numeros
-  amount.focus()
+  amountInput.focus()
 }
 
 // limpando os campos
 function formClear() {
-  amount.value = ""
-  min.value = ""
-  max.value = ""
+  amountInput.value = ""
+  minInput.value = ""
+  maxInput.value = ""
 }
 
 // manipulando cada input para receber somente numeros.
 // amount
 const hasCharactersRegex = /\D+/g
 
-amount.addEventListener("input", () =>{
-  amount.value = amount.value.replace(hasCharactersRegex,"")
+amountInput.addEventListener("input", () =>{
+  amountInput.value = amountInput.value.replace(hasCharactersRegex,"")
 })
 
 // min
-min.addEventListener("input", () =>{
-  min.value = min.value.replace(hasCharactersRegex,"")
+minInput.addEventListener("input", () =>{
+  minInput.value = minInput.value.replace(hasCharactersRegex,"")
 } )
 // max
-max.addEventListener("input", () => {
-  max.value = max.value.replace(hasCharactersRegex, "")
+maxInput.addEventListener("input", () => {
+  maxInput.value = maxInput.value.replace(hasCharactersRegex, "")
 })
 
 /*
@@ -92,7 +155,7 @@ max.addEventListener("input", () => {
 
 
   2 parte 
-  1.so numero no input.
+  1.so numero no input. ok
 
   ir para o random
   visao geral.
