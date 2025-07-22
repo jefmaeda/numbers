@@ -66,9 +66,10 @@ form.addEventListener("submit", (e) => {
     return alert("Não foi possível sortear com os dados fornecidos.")
   }
 
-  alert(`Números sorteados: ${numbers.join(", ")}`)
+  // alert(`Números sorteados: ${numbers.join(", ")}`)
+  console.log(numbers[0])
 
-
+  showResult(numbers)
   hiddenChange() // mudando de tela
 
   formClear()
@@ -172,6 +173,12 @@ maxInput.addEventListener("input", () => {
 againButton.addEventListener("click", () => {
   hiddenChange()
 })
+
+function showResult(randomResult) {
+  const resultNumber = document.querySelector("#out-number .numbers")
+
+  resultNumber.textContent = randomResult
+}
 
 
 
