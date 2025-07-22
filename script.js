@@ -61,6 +61,23 @@ function formClear() {
   max.value = ""
 }
 
+// manipulando cada input para receber somente numeros.
+// amount
+const hasCharactersRegex = /\D+/g
+
+amount.addEventListener("input", () =>{
+  amount.value = amount.value.replace(hasCharactersRegex,"")
+})
+
+// min
+min.addEventListener("input", () =>{
+  min.value = min.value.replace(hasCharactersRegex,"")
+} )
+// max
+max.addEventListener("input", () => {
+  max.value = max.value.replace(hasCharactersRegex, "")
+})
+
 /*
   troca de tela !!
   
@@ -72,7 +89,20 @@ function formClear() {
     
     2.- button
         - mudar o contexto. função de voltar.
-  
+
+
+  2 parte 
+  1.so numero no input.
+
+  ir para o random
+  visao geral.
+
+  - pegar os numeros do inputs e gerar, 
+  colunas de numeros, de minimo e maximo.
+
+  - tem a opsao de gerar numeros repetidos ou nao.
+
+  - mostrar o resultados, contabilizar as rodadas
 */
 
 // tela 2
