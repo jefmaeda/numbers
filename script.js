@@ -177,19 +177,23 @@ againButton.addEventListener("click", () => {
 })
 
 function showResult(randomResult) {
-  // const resultNumber = document.querySelector("#out-number .numbers")
-  // resultNumber.textContent = randomResult
-
   const resultArea = document.getElementById("out-number")
   
-  const divNumber = document.createElement("div")
-  divNumber.classList.add("numbers")
-
-  const p = document.createElement("p")
+  // Limpa resultados anteriores
+  resultArea.innerHTML = ""
 
   for (let index = 0; index < randomResult.length; index++) {
-    const element = randomResult[index];
-    p.textContent = element
+    const number = randomResult[index];
+
+    // cria <div class="number">
+    const divNumber = document.createElement("div")
+    divNumber.classList.add("numbers")
+
+    // cria o <p>
+    const p = document.createElement("p")
+    p.textContent = number
+
+    // Junta e adiciona na tela
     divNumber.appendChild(p)
     resultArea.appendChild(divNumber)
   }
