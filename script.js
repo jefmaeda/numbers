@@ -67,9 +67,6 @@ form.addEventListener("submit", (e) => {
   }
 
   //fazendo mudandsas
-  // alert(`Números sorteados: ${numbers.join(", ")}`)
-  console.log(numbers)
-
   showResult(numbers)
   //
   hiddenChange() // mudando de tela
@@ -198,9 +195,21 @@ function showResult(randomResult) {
     resultArea.appendChild(divNumber)
   }
   
-
+  countTry()
 }
 
+
+let count = 1
+function countTry() {
+  const countText = document.querySelector("#result .header p")
+
+  if (countText) {
+    countText.textContent = `${count}º resultado`
+    count++
+  } else {
+    console.warn("Elemento #result .header p não encontrado.")
+  }
+}
 
 
 
