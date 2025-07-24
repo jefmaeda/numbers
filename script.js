@@ -141,32 +141,6 @@ maxInput.addEventListener("input", () => {
   maxInput.value = maxInput.value.replace(hasCharactersRegex, "")
 })
 
-/*
-  troca de tela !!
-  
-  1 - Remover o form
-  2 - Reutlizar.
-    1.- header 
-      - mais vou deixar no centro (css), add class.
-      - contador de resultado.
-    
-    2.- button
-        - mudar o contexto. função de voltar.
-
-
-  2 parte 
-  1.so numero no input. ok
-
-  ir para o random
-  visao geral.
-
-  - pegar os numeros do inputs e gerar, 
-  colunas de numeros, de minimo e maximo.
-
-  - tem a opsao de gerar numeros repetidos ou nao.
-
-  - mostrar o resultados, contabilizar as rodadas
-*/
 
 // tela 2
 againButton.addEventListener("click", () => {
